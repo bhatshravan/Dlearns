@@ -1,0 +1,63 @@
+{
+
+    "feed": [
+        {
+            "id": 1,
+            "name": "~Firewolf soon to launch KSIT app",
+            "image": null,
+            "status": "Being the awesomest person in hard,but Shravan being the best is soon to release a great app",
+            "profilePic": "R.drawable.bus.png",
+            "timeStamp": "1403375851930",
+            "url": null
+        },
+             {
+            "id": 2,
+            "name": "Mini militia played in CSE B was awesome",
+            "image":null,
+            "status": "The recent mini militia competetion held every short break and lunch break garnered new visitors and thus became one of the must awaited event of the day",
+            "profilePic": null,
+            "timeStamp": "1403375851930",
+            "url": "google.com"
+        },
+    {
+            "id": 3,
+            "name": "Kakade wins lottery",
+            "image": null,
+            "status": "After getting into a good fight with Rakesh, Suhas kakade discovered a lottery ticket behind his bag thus winning a faltu lottery",
+            "profilePic": null,
+            "timeStamp": "1403375851930",
+            "url": ""
+        },
+      {
+            "id": 4,
+            "name": "Dum dum duma",
+            "image": null,
+            "status": "Dum dum duma? (Edited by the minions)",
+            "profilePic": "http://orig04.deviantart.net/4be1/f/2013/133/b/4/simple_battle_born_by_lechiffre17-d6544k6.jpg",
+            "timeStamp": "1403375851930",
+            "url": ""
+        } ,
+        {
+            "id": 5,
+            "name": "Forum ze link",
+            "image": null,
+            "status": "Dum dum duma? (Edited by the minions)",
+            "profilePic": "http://orig04.deviantart.net/4be1/f/2013/133/b/4/simple_battle_born_by_lechiffre17-d6544k6.jpg",
+            "timeStamp": "1403375851930",
+            "url": "www.omegawar3.byethost4.com/vanilla"
+        },
+{
+            "id": 6,
+            "name": "Forum of Mama mia",
+            "image": null,
+            "status": "Testing",
+            "profilePic": null,
+            "timeStamp": "1403375851930",
+            "url": null
+        }
+
+
+
+    ]
+
+}

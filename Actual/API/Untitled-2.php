@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="FW/style.css">
+	<link href="FW/css_003.css" rel="stylesheet" type="text/css">
+	<link href="FW/css.css" rel="stylesheet" type="text/css">
+	<link href="FW/css_002.css" rel="stylesheet" type="text/css">
+	<link href="FW/css_004.css" rel="stylesheet" type="text/css">
+	<title>View Clan #99QPPGUQ</title>
+</head>
+<body id="background">
+<?php
+		$accesstoken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIxNWEwNmQyLTQ1MjItNGVmYy1hNjBmLWZlYmVkZTYyMTY3OCIsImlhdCI6MTQ1NzAwNzQwNCwic3ViIjoiZGV2ZWxvcGVyLzBjY2RkYmMwLTVlZGYtZGFjNi0xOWVlLWQ0MGE2OTZiZjRmNSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjMxLjE3MC4xNjYuMSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.Z3uK6Gmn4CSlrh1drrNXPCr6y8ORcq-tthB0mu2ecFYIE718mTVhzYUqZhGjjuIgldfDsr-ZQiZo0lfe7NVvsw'; /* copy your own key */
+
+			$url = 'https://api.clashofclans.com/v1/clans/%2399QPPGUQ'; /* copy your own tag */
+			$ch = curl_init(htmlspecialchars($url));
+			$headr = array();
+			$headr[] = 'Accept: application/json';
+			$headr[] = 'Authorization: Bearer '.$accesstoken;
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+			$json = curl_exec($ch);
+			$parsed_json = json_decode($json);
+			$total_points = $parsed_json->{'clanPoints'};
+
+			$badge = $parsed_json->{'badgeUrls'}->{'small'};
+			$tag = $parsed_json->{'tag'};
+			$nom = $parsed_json->{'name'};
+			$cloc = $parsed_json->{'location'}->{'name'};
+			$type = $parsed_json->{'type'};
+			$clev = $parsed_json->{'clanLevel'};
+			$cno = $parsed_json->{'members'};
+			$trop_req = $parsed_json->{'requiredTrophies'};
+			$description_clan = $parsed_json->{'description'};
+			$total_points = $parsed_json->{'clanPoints'};
+			$warfre = $parsed_json->{'warFrequency'};
+			$warwin = $parsed_json->{'warWins'};
+				
+				
+					echo('
+	<div id="page-wrap">
+		<div id="content">
+			 <div id="clanName">Omega Warriors</div>
+			  <div id="clanTag">#99QPPGUQ</div>
+			   <div id="clanDetails">
+				 <div id="detailsLeft">
+				 <img class="clanBadgeBig" src="https://api-assets.clashofclans.com/badges/70/2VR-8VBuX3aK5NFLeqXL8-BOmFXwY6mefLPvmVb1ly0.png">
+				 <br>Level 4
+				</div>
+			     <div id="detailsCenter">
+				 <div class="detailsAttribute">	
+					 <span class="attributeName">Total points:</span><span class="attributeValue">'.$total_points.'</span>
+					</div>
+					<div class="detailsAttribute">
+					 <span class="attributeName">Wars won:</span><span class="attributeValue">'.$warwin.'</span>
+					</div>
+					<div class="detailsAttribute">
+					 <span class="attributeName">Members:</span><span class="attributeValue">'.$cno.'</span>
+					</div>
+					<div class="detailsAttribute">
+					 <span class="attributeName">Type:</span><span class="attributeValue">'.$type.'</span>
+					</div>
+					 <div class="detailsAttribute">
+					<span class="attributeName">Required trophies:</span><span class="attributeValue">'.$trop_req.'</span>
+					 </div>
+					<div class="detailsAttribute">
+					 <span class="attributeName">War frequency:</span><span class="attributeValue">'.$warfre.'</span>
+					</div>
+					<div class="detailsAttribute">
+					 <span class="attributeName">Clan location:</span><span class="attributeValue">International</span>
+					</div>
+					</div>
+				<div id="detailsRight">
+				Description : '.$description_clan. '<br>				
+				</div>
+		</div>
+		<div id="clanMember">
+				<table id="member">
+				<tbody><tr>
+					<th rowspan="2">Rank</th>
+					<th rowspan="2">League</th>
+					<th rowspan="2">Level</th>
+					<th rowspan="2">Name</th>
+					<th rowspan="2">Role</th>
+					<th colspan="3">Donation</th>
+					<th rowspan="2">Trophies</th>
+				</tr>
+				<tr>
+					<th class="donation">Troops Donated</th>
+					<th class="donation">Troops Received</th>
+					<th class="donation">Ratio</th>
+				</tr>');
+				for ($i=0; $i < $cno; $i++) {
+				$rank = $parsed_json->{'memberList'}[$i]->{'clanRank'};
+				$Mem_name = $parsed_json->{'memberList'}[$i]->{'name'};
+				$role = $parsed_json->{'memberList'}[$i]->{'role'};
+				$experience = $parsed_json->{'memberList'}[$i]->{'expLevel'};
+				$mem_league = $parsed_json->{'memberList'}[$i]->{'league'}->{'name'};
+				$img = $parsed_json->{'memberList'}[$i]->{'league'}->{'iconUrls'}->{'small'};
+				$mem_tro = $parsed_json->{'memberList'}[$i]->{'trophies'};
+				$mem_don = $parsed_json->{'memberList'}[$i]->{'donations'};
+				$mem_req = $parsed_json->{'memberList'}[$i]->{'donationsReceived'};
+				
+				$mdon=$mem_don;
+				$mreq=$mem_req;
+				
+				if($m_don==0)
+				{ $mdon=1; }
+				if($mem_req==0)
+				{ $mreq=1; }
+				
+				$rati=$mdon/$mreq;
+				$ratio=round($rati,3);
+				$c_rat[$i] = $ratio;	
+				$c_don[$i] = $mem_don;
+				$c_req[$i] = $mem_req;
+				$adsz='arra';
+						
+				$c_par[$i] =$Mem_name=> $mem_don;
+				
+				 echo('<tr>
+					<td class="alignRight">'.$rank.'</td>
+					<td class="alignCenter"><img src="'.$img.'"align="center""</img></td>
+					<td class="alignRight">'.$experience.'</td>
+					<td>'.$Mem_name.'</td>
+					<td>'.$rank.'</td>
+					<td class="alignRight">'.$mem_don.'</td>
+					<td class="alignRight">'.$mem_req.'</td>
+					<td class="alignRight">'.$ratio.'</td>
+					<td class="alignRight">'.$mem_tro.'</td>
+				</tr>');
+				}
+				echo('</table>
+				</div>');
+				
+				ksort($c_par);
+				echo('
+				<br>
+				<h1> Top 10 donators</h1>
+				<div id="clanMember">
+				<table id="member">
+				<tbody><tr>
+				<th>Rank</th>
+				<th>Name</th>
+				<th>Troops Donated</th>
+				</tr>)');
+				for ($i=$cno; $i>10; $i--) {
+				$rank = $parsed_json->{'memberList'}[$i]->{'clanRank'};
+				$Mem_name = $parsed_json->{'memberList'}[$i]->{'name'};
+				$mem_don = $parsed_json->{'memberList'}[$i]->{'donations'};
+				
+				echo('
+				<tr>
+				<td>2b</td>
+				<td>'.$Mem_name.'</td>
+				<td>'.$mem_don.'</td>
+				</tr>');
+				}
+				echo('
+				</table>
+				</div>
+			
+	</div>');?>
+   </body>
+</html>

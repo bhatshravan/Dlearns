@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fire Gayle wolf</title>
+<link rel="stylesheet" type="text/css" href="index.css" > <!--Home css file-->
+<script language="JavaScript">
+<!--
+function Gol(){
+	var i=0;
+	var p1=0;
+	var p2=0;
+	var p3=0;
+	var c1=0;
+	var c2=0;
+	var c3=0;
+	var m1=0;
+	var m2=0;
+	s=999;
+if((parent.name)=="333")
+i=5567023849;
+else
+document.write(parent.name);
+
+document.write("<tr><th>Physics</th>")
+document.write("<th>Chemistry</th>")
+document.write("<th>Maths</th></tr>")
+document.write("<tr><td><a href=http://www.learn.digilearn.com/organisation"+i+"/module/"+s+"hello>1-Electrostatics</td>")
+document.write("<td><a href=http://www.learn.digilearn.com/organisation"+i+"/module/"+s+"hello>1-Chemical Kinetics</td>")
+document.write("<td><a href=http://www.learn.digilearn.com/organisation"+i+"/module/"+s+"hello>1-Inverse Trigonometry</td></tr>")
+}
+//-->
+</script>
+</head>
+
+<body>
+ <div id="container">
+	<div id="header" align="center">
+    	<h2><a href="home.html">Home</a>&nbsp;&nbsp;
+        <a href="library.html">Library</a>&nbsp;&nbsp;
+        <bold align="right" id="box">Log In</bold></h2></div>
+    </div>
+    <hr />
+	<div id="content">
+<table border="1" align="center">
+<script>
+Gol()
+</script>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+#box
+{
+	color: white;
+	text-align:right;
+	background-color: #F60;
+}
+#header
+{
+	background-color:#CCC;
+	border-color:black;
+	height:50px;
+}
+#content
+{
+	margin-top:auto;
+	clear:both;
+}

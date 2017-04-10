@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="<!--clan bade-2b-->">
+
+    <title>Omega War Family</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Files/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/Files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Files/sticky-footer-navbar.css" rel="stylesheet">
+    <!-- Awesome font include -->
+    <link rel="stylesheet" href="/Files/font-awesome.css">
+    <link href="/Files/select2.css" rel="stylesheet">
+    <!-- custom style sheet include -->
+    <link href="/Files/custom.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/Files/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+  </head>
+  
+  
+ <body id="top">
+
+<?php include('navbar.php');?>
+
+
+	<div class="container">
+	<div class="jumbotron">
+		<h2>
+		Welcome to the OMEGA WAR FAMILY. Chose your clan. Right now our family consists of the following clans!
+		</h2>
+	</div>
+	 <?php
+			
+			$accesstoken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjU4ZGFjN2E2LWZjOTMtNGQxNy04N2JhLTFjMDVlZGVlYTM5ZiIsImlhdCI6MTQ1NzQzMDQ0Mywic3ViIjoiZGV2ZWxvcGVyLzBjY2RkYmMwLTVlZGYtZGFjNi0xOWVlLWQ0MGE2OTZiZjRmNSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjE4NS4yNy4xMzQuNjMiXSwidHlwZSI6ImNsaWVudCJ9XX0.PdA8KXzbLNmRmovjSWGTWAdDbl59vcUSViIl_RQxaRjjFxGPgBXfe6EE2W53MWP8Yb0z-68h9pjFIrRhPRvpzg';
+			$url = 'https://api.clashofclans.com/v1/clans/%2399QPPGUQ'; /* copy your own tag */
+			$ch = curl_init(htmlspecialchars($url));
+
+			$headr = array();
+			$headr[] = 'Accept: application/json';
+			$headr[] = 'Authorization: Bearer '.$accesstoken;
+
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+			$json = curl_exec($ch);
+			$parsed_json = json_decode($json);
+			
+				$badge = $parsed_json->{'badgeUrls'}->{'small'};
+				$tag = $parsed_json->{'tag'};
+				$nom = $parsed_json->{'name'};
+				$cloc = $parsed_json->{'location'}->{'name'};
+				$type = $parsed_json->{'type'};
+				$clev = $parsed_json->{'clanLevel'};
+				$cno = $parsed_json->{'members'};
+				$trop_req = $parsed_json->{'requiredTrophies'};
+				$description_clan = $parsed_json->{'description'};
+				$total_points = $parsed_json->{'clanPoints'};
+				$warfre = $parsed_json->{'warFrequency'};
+				$warwin = $parsed_json->{'warWins'};
+				
+	echo('
+	<div class="jumbotron">
+     <div class="row">
+        <div class="col-xs-12 text-center">
+            <h1 class="depthEffectText">OMEGA WARRIORS</h1>
+        </div>
+     </div>
+     <div class="row clanDetail">
+        <div class="col-xs-12 col-md-3 text-center">
+            <ul class="list-group">
+                <li class="list-group-item">
+				<img src=" https://api-assets.clashofclans.com/badges/70/2VR-8VBuX3aK5NFLeqXL8-BOmFXwY6mefLPvmVb1ly0.png"></li>
+                <li class="list-group-item">Clantag: #99QPPGUQ</li>
+                <li class="list-group-item">Clanlevel: <div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="10" style="width:40%">4/10</div></div></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-md-9">
+            <ul class="list-group">
+                <li class="list-group-item">Clan points : 10800
+			</li>
+                <li class="list-group-item">War wins:'.$warwin.'</li>
+                <li class="list-group-item">Members: <div class="progress">
+				<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="'.$cno.'" aria-valuemin="0" aria-valuemax="50" style="width:80%">29/50</div></div></li>
+                <li class="list-group-item">Clan type: '.$type. '</li>
+                <li class="list-group-item">Trophies Required : '.$trop_req.' </li>
+                <li class="list-group-item">War frequency: Always</li>
+                <li class="list-group-item">Clan Location: International</li>
+            </ul>       
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="whiteBorderText clanDescript">18+ 
+				Pro-Warclan👊 Rules> 👫 Must use both attacks in war. ✅ 👫 Promotions not to be asked
+				👫Elder is 150 donations,Co is 750👌 Clash on 
+				Bro"s and Sis💃😎🍻 omegawars.co.nr</p>
+            </div>
+        </div>   
+	</div> 
+  </div>');?>
+  
+	 <?php
+			
+			$aaccesstoken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIxNWEwNmQyLTQ1MjItNGVmYy1hNjBmLWZlYmVkZTYyMTY3OCIsImlhdCI6MTQ1NzAwNzQwNCwic3ViIjoiZGV2ZWxvcGVyLzBjY2RkYmMwLTVlZGYtZGFjNi0xOWVlLWQ0MGE2OTZiZjRmNSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjMxLjE3MC4xNjYuMSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.Z3uK6Gmn4CSlrh1drrNXPCr6y8ORcq-tthB0mu2ecFYIE718mTVhzYUqZhGjjuIgldfDsr-ZQiZo0lfe7NVvsw'; /* copy your own key */
+
+			$aurl = 'https://api.clashofclans.com/v1/clans/%23Y9J22U2V'; /* copy your own tag */
+			$ach = curl_init(htmlspecialchars($aurl));
+
+			$aheadr = array();
+			$aheadr[] = 'Accept: application/json';
+			$aheadr[] = 'Authorization: Bearer '.$aaccesstoken;
+
+			curl_setopt($ach, CURLOPT_HTTPHEADER, $aheadr);
+			curl_setopt($ach, CURLOPT_SSL_VERIFYHOST, false);
+			curl_setopt($ach, CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ach, CURLOPT_RETURNTRANSFER, 1);
+
+			$ajson = curl_exec($ach);
+			$aparsed_json = json_decode($ajson);
+			
+				$abadge = $aparsed_json->{'badgeUrls'}->{'small'};
+				$atag = $aparsed_json->{'tag'};
+				$anom = $aparsed_json->{'name'};
+				$acloc = $aparsed_json->{'location'}->{'name'};
+				$atype = $aparsed_json->{'type'};
+				$aclev = $aparsed_json->{'clanLevel'};
+				$acno = $aparsed_json->{'members'};
+				$atrop_req = $aparsed_json->{'requiredTrophies'};
+				$adescription_clan = $aparsed_json->{'description'};
+				$atotal_points = $aparsed_json->{'clanPoints'};
+				$awarfre = $aparsed_json->{'warFrequency'};
+				$awarwin = $aparsed_json->{'warWins'};
+				
+	echo('
+	<div class="jumbotron">
+     <div class="row">
+        <div class="col-xs-12 text-center">
+            <h1 class="depthEffectText">Fire Wolves</h1>
+        </div>
+     </div>
+     <div class="row clanDetail">
+        <div class="col-xs-12 col-md-3 text-center">
+            <ul class="list-group">
+                <li class="list-group-item">
+				<img src="'.$abadge.'"></li>
+                <li class="list-group-item">Clantag: #Y9J22U2V</li>
+                <li class="list-group-item">Clanlevel: <div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10" style="width:40%">5/10</div></div></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-md-9">
+            <ul class="list-group">
+                <li class="list-group-item">Clan points : '.$atotal_points .'
+			</li>
+                <li class="list-group-item">War wins:'.$awarwin.'</li>
+                <li class="list-group-item">Members: <div class="progress">
+				<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="'.$acno.'" aria-valuemin="0" aria-valuemax="50" style="width:80%">'.$acno.'/50</div></div></li>
+                <li class="list-group-item">Clan type: '.$atype. '</li>
+                <li class="list-group-item">Trophies Required : '.$atrop_req.' </li>
+                <li class="list-group-item">War frequency:'.$awarfre.'</li>
+                <li class="list-group-item">Clan Location: '.$acloc.'</li>
+            </ul>       
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center"><p class="whiteBorderText clanDescript">'.$adescription_clan.'</p>
+            </div>
+        </div>   
+	</div> 
+  </div>');?>
+  
+  
+ <div class="jumbotron disclaimer">
+    <div class="row">
+    <div class="col-xs-12"><h3>Disclaimer</h3>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+Clash of Clans and its logos are trademarks of Supercell.
+This web site is not affiliated with, endorsed, sponsored, or specifically approved by Supercell.
+Supercell is not responsible for the operation or content of this site.
+For more information about Supercell, please visit their website at
+<a href="http://www.supercell.net/">supercell.net</a>.
+</p>
+</div>
+
+    <!-- Begin page footer -->
+    <footer class="footer">
+     <span id="top-link-block" class="affix-top">
+        <a href="#top" class="well well-sm" onclick="$("html,body").animate({scrollTop:0},"slow");return false;"><i class="glyphicon glyphicon-chevron-up"></i> Back to Top</a>
+    </span><!-- /top-link-block -->
+    </footer>
+    <!-- End page footer -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/Files/jquery.js"></script>
+    <script>window.jQuery || document.write("<script src="js/vendor/jquery.min.js"><\/script>")</script>
+    <script src="/Files/bootstrap.js"></script>
+    <!-- unclude custom.js -->
+    <script src="/Files/custom.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/Files/ie10-viewport-bug-workaround.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="/Files/smooth-scroll.js"></script>
+        <!-- high charts include -->
+    <script src="/Files/highcharts.js"></script>
+    <script src="/Files/exporting.js"></script>
+    <!-- stats script -->
+    <script src="/Files/playerStats.js"></script>
+  
+  </div></div>');?></body></html>

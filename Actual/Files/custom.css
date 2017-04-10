@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'scFont';
+  src: url('../fonts/sc.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/sc.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/sc.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/sc.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/sc.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+}
+
+/* Remove border form member list icons, added by Sander */
+.listMember .img-thumbnail {
+	border:0;
+}
+
+body {
+    margin: 0 auto;
+    background: url(../images/siteBackground.jpg) no-repeat center right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: scFont;
+    font-size: 12px;
+    min-height:100%;
+}
+
+html{
+    height:100%;
+    min-height:100%;
+}   
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
+
+.container-fluid {
+    padding: 30px 30px;
+  }
+  .toTop{
+      color:#FFF;
+      padding-right:30px;
+  }
+.jumbotron {
+    padding: 25px 25px;
+    border-radius: 0px;
+    background-color: rgba(245, 245, 245, 0.8);
+    border:1px solid white;
+}
+
+.leagueBadge {
+    border-top:none;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.navbar {
+    /*font-family: Montserrat, sans-serif;*/
+    background-color:#DDD;
+}
+
+/*////////Contact//////*/
+.jumbotron-sm {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.jumbotron small {
+    color: #FFF;
+}
+.h1 small {
+    font-size: 24px;
+}
+.container .contact{
+    background-color:#FFF;
+    border-radius: 5px;
+}
+.playerName div{
+    background-color: #FFF;
+}
+.panel {
+    min-height: 235px;
+    background-color:transparent;
+    box-shadow: none;
+}
+.panelHeader{
+    padding: auto 0;
+}
+
+.clanDetail{
+    min-height: 400px;
+}
+
+.progress{
+    margin-bottom:0;
+	display:inline-block;
+	width:85%;
+	margin-bottom:-4px;
+}
+.progress-bar {
+	font-size: 10px;
+}
+
+.blackBorderText{
+    text-shadow: 
+        -1px -1px 0px #000,
+         0px -1px 0px #000,
+         1px -1px 0px #000,
+        -1px  0px 0px #000,
+         1px  0px 0px #000,
+        -1px  1px 0px #000,
+         0px  1px 0px #000,
+         1px  1px 0px #000;
+}
+.whiteBorderText{
+    text-shadow: 
+        -1px -1px 0px #FFF,
+         0px -1px 0px #FFF,
+         1px -1px 0px #FFF,
+        -1px  0px 0px #FFF,
+         1px  0px 0px #FFF,
+        -1px  1px 0px #FFF,
+         0px  1px 0px #FFF,
+         1px  1px 0px #FFF;
+}
+p.clanDescript{
+    font-size: 17px;
+    border-radius: 5px;
+}
+.depthEffectText{
+    color:#fff!important;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+/* default colors */
+.redText{
+    color:#FF0000;
+}
+.greenText{
+    color:#008000;
+}
+
+.gold {
+    color:#D5AD6D; /*if no support for background-clip*/
+    background: -webkit-linear-gradient(transparent, transparent),-webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-right:3px;
+}
+
+.dropShadow {
+    position:relative;
+    z-index:9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 2);
+ -webkit-box-shadow:0 2px 10px rgba(0, 0, 0, 2);
+}
+
+.memberCard{
+    min-height:285px;
+    background-color:#fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.memberCardContainer{
+    min-height:315px;
+}
+.listMember{
+    padding:10px 10px;
+}
+.memberCard h5{
+    line-height:inherit;
+    font-size:13px;
+}
+
+.disclaimer{
+    font-family: verdana, sans-serif;
+    
+}
+.disclaimer p{
+    font-size: 12px;
+    font-weight: bold;
+}
+.disclaimer a, .disclaimer a:hover{
+    /*color:#FFF;*/
+	color:#333;
+	text-decoration:underline;
+}
+.disclaimer h3{
+    font-size:24px;
+    color:#337AB7;
+        font-weight: bold;
+     }
+     
+/*-----back to top ----------*/
+#top-link-block.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -82px; /* negative of the offset - height of link element */
+    right: 10px; /* padding from the left side of the window */
+    float:right;
+    
+}
+#top-link-block.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 18px; /* height of link element */
+    right: 10px; /* padding from the left side of the window */
+    float:right;
+}
+
+.footer a, .footer a:visited{
+    color:#000;
+}
+
+.footer a:hover{
+    color:#000;
+    text-decoration: underline;
+}
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
+.modal{
+    font-family: verdana, sans-serif;
+}

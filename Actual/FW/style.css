@@ -1,0 +1,268 @@
+/* 
+===================
+main layout - start
+===================
+*/
+* {
+  margin: 0;
+}
+
+body {
+	font-family: "Lato","Verdana";
+	font-size: 18px;
+	color: #212121;
+	margin: 0;
+	padding: 0;
+}
+
+#header {
+	font-size: 2em;
+	font-weight: 500;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	background: rgb(255, 255, 255); /* Fall-back for browsers that don't
+                                    support rgba */
+	background: rgba(27, 25, 25, 1);
+	font-family: 'Roboto', sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 40px;
+	width: 100%;
+	min-width: 980px;
+}
+
+.error {
+	color: red;
+	font-style: italic;
+	margin-bottom: 2px;
+	font-size: 0.9em;
+}
+
+#clanName {
+	font-size: 4em;
+	font-weight: 500;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-family: 'Changa One', cursive;
+	color: #F0C842;
+}
+
+#clanTag {
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+	margin: 0px auto;
+	padding-bottom:7px;
+	color: #FE8802;
+	letter-spacing: 5px;
+}
+
+#header a, #clanName a{
+	text-decoration: none;
+}
+
+#header a:link, #header a:visited, #clanName a:link, #clanName a:visited {
+	color: white;
+	color: #F0C842;
+}
+
+a:visited {
+	color: blue;
+}
+
+a:hover {
+	color: #FE8802;
+}
+
+.noHover:hover {
+	color: #212121;
+}
+
+#content {
+	color: #212121;
+	padding: 10px 20px 40px 20px;
+	padding-right: 0px;
+	width: 940px;
+	margin: 0 auto;	
+	margin-top: 40px;
+}
+
+/* 
+=================
+main layout - end
+=================
+*/
+
+.label {
+	float: left;
+	clear: left;
+	width: 200px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.inputSearch {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+form .button {
+	margin-left: 210px;
+	font-size: 18px;
+}
+
+#inputName, #inputLevel, #inputWar, #inputMembers {
+	width: 200px;
+}
+
+.displayNone {
+	display: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid #212121;
+	color: #212121;
+}
+
+th {
+	padding: 5px;
+}
+
+th, td, pre, td pre{
+	background: rgb(255, 255, 255); /* Fall-back for browsers that don't
+                                    support rgba */
+	background: rgba(255, 255, 255, 0.8);
+}
+
+table#member tr:nth-child(2n+3) {background: grey}
+table.donation tr:nth-child(2n+3) {background: grey}
+.stats tr:nth-child(even) {background: grey}
+
+td {
+	white-space: pre;
+	padding: 5px;
+}
+
+td.alignRight {
+	text-align: right;
+}
+
+th.name {
+	width: 220px;
+}
+
+th.role {
+	width: 100px;
+}
+
+th.donation {
+	width: 120px;
+}
+
+td.alignCenter {
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+td pre {
+	border: none;
+}
+
+#clan, #topDonator, #topRatio, #bottomRatio, #statistics, #donation {
+	margin-top: 20px;
+}
+
+img.clanBadge {
+	width: 30px;
+	vertical-align: middle;
+}
+
+img#icon {
+	width: 16px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+img#crown {
+	width: 16px;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.memberName {
+	font-weight: bold;
+}
+
+img.clanBadgeBig {
+	width: 100px;
+	margin-bottom: -20px;
+}
+
+#clanDetails {
+	width: 770px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.9em;
+	
+	background: pink;
+}
+
+#detailsLeft {
+	float: left;
+	width: 150px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#detailsCenter {
+	float: left;
+	width: 250px;
+	padding-right: 20px;
+}
+
+#detailsRight {
+	float: left;
+	width: 350px;
+}
+
+.detailsAttribute {
+	overflow: hidden;
+	border-bottom: 1px solid;
+}
+
+.attributeName {
+	float: left;
+}
+
+.attributeValue {
+	float: right;
+	font-weight: bold;
+}
+
+#clanMember {
+	float: none;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+@media only screen and (max-device-width: 480px) {
+	body#background {
+		background: none;
+	}
+}
