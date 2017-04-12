@@ -1,0 +1,76 @@
+body
+ {
+	 background-color:white/*#EBEBEB*/;
+	background-position: fixed;
+	background-repeat:no-repeat;
+	font-family: Times New Roman , serif;
+	color:black;
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:50px;
+}
+
+#imgp
+{
+	margin-right:10px;
+}
+
+#container
+ {
+	position: relative;
+	background-color: white;
+}
+
+#loginbox
+{
+}
+ 
+#content
+ {
+ 	background-color:white;
+   /* margin-top:20px;*/	
+	float:left;
+	width:75%;
+	text-align:left;
+	margin-left:10px;
+	}
+
+#header
+ {
+	background-color:white;
+	clear:both;
+	font-size:50px;
+	text-align:center;
+}
+
+#footer
+ {
+	 color:white;
+	 background-color:black;
+	 clear:both;
+	 text-align:center;
+}
+
+#footermenu
+{
+	color:white;
+	text-align:center;
+	clear:none;
+	background-color:black;
+}
+
+#sidebar
+ {
+	background-color:gray;
+	margin-right:5px;
+	height:80%;
+	width:23%;
+	float:right;
+	position:relative;
+ }
+ 
+#img2
+{
+	height:100%;
+}
+ 
